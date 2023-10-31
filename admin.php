@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 function readUserData() {
     $file = "user_data.txt";
     $data = file($file, FILE_IGNORE_NEW_LINES);
@@ -45,8 +47,14 @@ if (isset($_POST['delete'])) {
     header("Location: admin.php");
     exit;
 }
-?>
 
+if (isset($_POST['logout'])) {
+    // Destroy the session and redirect to the login page
+    session_destroy();
+    header("Location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,5 +68,8 @@ if (isset($_POST['delete'])) {
     <?php
     readUserData();
     ?>
+    <form method="post" class="mt-3">
+        <button type="submit" name="logout" class="btn btn-danger">Logout</button>
+    </form>
 </body>
 </html>

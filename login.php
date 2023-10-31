@@ -80,6 +80,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php } ?>
         <button type="submit" class="btn btn-primary">Log In</button>
     </form>
+    <!-- add registr anchor tag -->
+    <a href="index.php">Register</a>
+
 </body>
 
 </html>
