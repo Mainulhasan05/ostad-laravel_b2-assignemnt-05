@@ -1,2 +1,2 @@
 Username: rifatewu, Email: mdrifastbd5@gmail.com, Password: 1234, Role: user
-Username: testinguser, Email: mdrifatbd5@gmail.com, Password: 12345, Role: user
+Username: mainulhasan, Email: admin@gmail.com, Password: 12345, Role: admin

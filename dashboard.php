@@ -6,6 +6,10 @@ if (!isset($_SESSION['email'])) {
     header("Location: login.php");
     exit;
 }
+if ($_SESSION['role']=='admin') {
+    header("Location: admin.php");
+    exit;
+}
 
 // Get user data from the session
 $username = $_SESSION['username'];
